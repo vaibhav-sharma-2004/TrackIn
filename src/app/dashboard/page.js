@@ -19,15 +19,14 @@ export default function DashboardPage() {
     setReports(getReports());
   }, []);
 
-  // Inventory stats
+
   const lowStock = inventory.filter(i => i.status === "Low").length;
   const unavailableStock = inventory.filter(i => i.status === "Unavailable").length;
 
-  // Product stats
   const availableProducts = products.filter(p => p.available).length;
   const unavailableProducts = products.filter(p => !p.available).length;
 
-  // Report stats
+
   const openReports = reports.filter(r => r.status === "Open").length;
   const inProgressReports = reports.filter(r => r.status === "In Progress").length;
   const closedReports = reports.filter(r => r.status === "Closed").length;
@@ -37,7 +36,7 @@ export default function DashboardPage() {
       <h1 className="text-3xl font-semibold mb-6">Dashboard</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* INVENTORY */}
+    
         <section className="bg-white rounded-lg shadow-sm p-4">
           <h2 className="text-lg mb-2 font-black text-black">Inventory Overview</h2>
           <ul className="text-sm text-gray-700 space-y-1">
@@ -47,7 +46,7 @@ export default function DashboardPage() {
           </ul>
         </section>
 
-        {/* PRODUCTS */}
+       
         <section className="bg-white rounded-lg shadow-sm p-4">
           <h2 className="text-lg mb-2 font-bold text-black">Products Overview</h2>
           <ul className="text-sm text-gray-700 space-y-1">
@@ -57,7 +56,7 @@ export default function DashboardPage() {
           </ul>
         </section>
 
-        {/* DEALERS */}
+       
         <section className="bg-white rounded-lg shadow-sm p-4">
           <h2 className="text-lg mb-2 font-bold text-black">Dealers Overview</h2>
           <ul className="text-sm text-gray-700 space-y-1">
@@ -72,7 +71,7 @@ export default function DashboardPage() {
           </ul>
         </section>
 
-        {/* REPORTS */}
+       
         <section className="bg-white rounded-lg shadow-sm p-4">
           <h2 className="text-lg mb-2 font-bold text-black">Reports Overview</h2>
           <ul className="text-sm text-gray-700 space-y-1">

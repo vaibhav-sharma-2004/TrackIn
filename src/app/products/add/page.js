@@ -25,7 +25,7 @@ export default function AddProductPage() {
     router.push("/products");
   }
 
-  // 🔹 NEW: Cancel logic
+
   function handleCancel() {
     router.push("/products");
   }
